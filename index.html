@@ -216,8 +216,16 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
 </script>
 
 <script>
-    document.querySelector('.hamburger').addEventListener('click', function() {
-        document.querySelector('.klik').classList.toggle('active');
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".klik");
+        const contentImage = document.querySelector(".content__image");
+
+        hamburger.addEventListener("click", function () {
+            menu.classList.toggle("open");
+            hamburger.classList.toggle("open");
+            contentImage.classList.toggle("hidden");
+        });
     });
 </script>
 </html>
