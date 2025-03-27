@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Apostrophic';
+    src: url('../fonts/apostrophic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay';
+    src: url('../fonts/sf-ui-display-bold-58646a511e3d9.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay';
+    src: url('../fonts/sf-ui-display-light-58646b33e0551.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay';
+    src: url('../fonts/sf-ui-display-medium-58646be638f96.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*begin navigatie code*/
+nav{
+    background-color: #231C13;
+    border-radius: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: #D9D4CA;
+    font-family: 'Apostrophic';
+    font-size: 1.6em;
+}
+
+.navigatie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 24px 20px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.klik {
+    display: none;
+}
+
+.hamburger {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #D9D4CA;
+}
