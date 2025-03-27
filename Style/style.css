@@ -95,6 +95,10 @@ a{
     margin-right: 10%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*header*/
 
 .content__image{
@@ -146,7 +150,7 @@ a{
 /*section about me*/
 
 .content__about{
-    margin-bottom: 160px;
+    margin-bottom: 100px;
 }
 
 .me{

@@ -65,11 +65,11 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
                     <a href="index.html">Moreira</a>
                 </div>
                 <div class="klik">
-                    <a href="#">Specialisaties</a>
-                    <a href="#">Over mij</a>
-                    <a href="#">Werk</a>
+                    <a href="#specials" class="nav-link">Specialisaties</a>
+                    <a href="#about" class="nav-link">Over mij</a>
+                    <a href="#werk" class="nav-link">Werk</a>
 
-                    <a id="contactnav" href="contact.html">Contact</a>
+                    <a id="contactnav" href="#contact" class="nav-link">Contact</a>
                 </div>
                 <div class="hamburger">
                     <div class="bar"></div>
@@ -83,10 +83,10 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
     <div class="content">
         <div class="content__image">
             <h1>Portfolio</h1>
-            <a href="#"><img src="images/arrow.png" alt=""></a>
+            <a href="#specials"><img src="images/arrow.png" alt=""></a>
         </div>
 
-        <div class="content__specials">
+        <div id="specials" class="content__specials">
             <h1>Specialisaties</h1>
             <div>
                 <h2>Graphic Designer</h2>
@@ -100,7 +100,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
         </div>
 
         <div class="content__about">
-            <div class="content__about__Image">
+            <div id="about" class="content__about__Image">
                 <img class="me" src="images/me.png" alt="">
                 <img class="me__mobile"src="images/me-mobile.png" alt="">
             </div>
@@ -141,7 +141,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
             </div>
         </div>
 
-        <div class="content__werk">
+        <div id="werk" class="content__werk">
             <h1>Mijn werk</h1>
             <div class="content__werk__works">
                 <div class="content__werk__details">
@@ -183,7 +183,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
             </div>
         </div>
 
-        <div class="content__contact">
+        <div id="contact" class="content__contact">
             <h1>
                 <a href="mailto:yadina.moreira@gmail.com">Send me an email</a>
             </h1>
@@ -220,11 +220,20 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
         const hamburger = document.querySelector(".hamburger");
         const menu = document.querySelector(".klik");
         const contentImage = document.querySelector(".content__image");
+        const navLinks = document.querySelectorAll(".nav-link");
 
         hamburger.addEventListener("click", function () {
             menu.classList.toggle("open");
             hamburger.classList.toggle("open");
             contentImage.classList.toggle("hidden");
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                menu.classList.remove("open"); // Verberg het menu
+                hamburger.classList.remove("open"); // Verberg de hamburger
+                contentImage.classList.remove("hidden"); // Zorg ervoor dat de afbeelding zichtbaar is
+            });
         });
     });
 </script>
