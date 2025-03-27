@@ -26,19 +26,17 @@
     font-style: normal;
 }
 
-/*begin navigatie code*/
+/*begin navigatie code phone*/
 nav{
     background-color: #231C13;
-    border-radius: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
+    /*border-radius: 50px;*/
 }
 
-a{
+.logo-container a{
     text-decoration: none;
     color: #D9D4CA;
     font-family: 'Apostrophic';
-    font-size: 1.6em;
+    font-size: 2.4em;
 }
 
 .navigatie {
@@ -47,6 +45,8 @@ a{
     align-items: center;
     position: relative;
     padding: 24px 20px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .logo-container {
