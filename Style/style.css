@@ -189,20 +189,33 @@ html {
     margin-right: 20px;
 }
 
-.studies__content{
-    display: none;
-}
-
-.ervaring__content{
-    display: none;
-}
-
 .content__about h1{
     margin-top: -40px;
 }
 
 .content__about p{
     margin-bottom: 40px;
+}
+
+.studies__content {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease; 
+    margin-bottom: 20px;
+}
+
+.studies__content.open {
+    max-height: 200px; 
+}
+
+.ervaring__content {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease; 
+}
+
+.ervaring__content.open {
+    max-height: 200px; 
 }
 
 /*section work*/

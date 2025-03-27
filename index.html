@@ -112,7 +112,7 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
                     Een gepassioneerde en creatieve digitale designer gespecialiseerd in UX/UI design, grafisch ontwerp, brand design en marketing. 
                     Met mijn motivatie en enthousiasme ben ik in staat om gebruiksvriendelijke en visueel aantrekkelijke ontwerpen te creëren.
                 </p>
-                <a href="#">
+                <a href="#" class="studies-toggle">
                     <div class="content__about__dropdown studies">
                         <h3>Studies</h3>
                         <img src="images/arrow-down.png" alt="">
@@ -120,12 +120,12 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
                 </a>
                 <div class="studies__content">
                     <ul>
-                        <li>Professionele bachelor in Informatiemanagement en Multimedia </li>
+                        <li>Professionele bachelor in Informatiemanagement en Multimedia</li>
                         <li>1 jaar van Bachelor Sociaal werk</li>
                         <li>Diploma secundair onderwijs Sociale Technische Wetenschappen</li>
                     </ul>
                 </div>
-                <a href="#">
+                <a href="#" class="ervaring-toggle">
                     <div class="content__about__dropdown ervaring">
                         <h3>Ervaring</h3>
                         <img src="images/arrow-down.png" alt="">
@@ -222,6 +222,12 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
         const contentImage = document.querySelector(".content__image");
         const navLinks = document.querySelectorAll(".nav-link");
 
+        const studiesToggle = document.querySelector(".studies-toggle");
+        const studiesContent = document.querySelector(".studies__content");
+
+        const ervaringToggle = document.querySelector(".ervaring-toggle");
+        const ervaringContent = document.querySelector(".ervaring__content");
+
         hamburger.addEventListener("click", function () {
             menu.classList.toggle("open");
             hamburger.classList.toggle("open");
@@ -234,6 +240,30 @@ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+
                 hamburger.classList.remove("open"); // Verberg de hamburger
                 contentImage.classList.remove("hidden"); // Zorg ervoor dat de afbeelding zichtbaar is
             });
+        });
+
+        studiesToggle.addEventListener("click", function (event) {
+            event.preventDefault(); // Voorkomt dat de link de pagina herlaadt
+            studiesContent.classList.toggle("open"); // Voeg de class toe of verwijder deze
+
+            const arrow = studiesToggle.querySelector("img");
+            if (studiesContent.classList.contains("open")) {
+                arrow.src = "images/arrow-up.png"; 
+            } else {
+                arrow.src = "images/arrow-down.png"; 
+            }
+        });
+
+        ervaringToggle.addEventListener("click", function (event) {
+            event.preventDefault(); // Voorkomt dat de link de pagina herlaadt
+            ervaringContent.classList.toggle("open"); // Voeg de class toe of verwijder deze
+
+            const arrow = ervaringToggle.querySelector("img");
+            if (ervaringContent.classList.contains("open")) {
+                arrow.src = "images/arrow-up.png"; 
+            } else {
+                arrow.src = "images/arrow-down.png"; 
+            }
         });
     });
 </script>
