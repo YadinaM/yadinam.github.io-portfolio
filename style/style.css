@@ -329,7 +329,7 @@ footer{
 
 @media only screen and (min-width: 700px) {
     p, li{
-        font-size: 14pt;
+        font-size: 12pt;
     }
 
     .content{
@@ -383,6 +383,7 @@ footer{
         max-width: 1600px;
         width: 90%;
         margin: 0 auto;
+        gap: 40px;
     }
 
     .content__about__texts {
