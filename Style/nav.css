@@ -113,7 +113,7 @@ nav{
     transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .klik {
         position: static;
         width: auto;
@@ -127,5 +127,11 @@ nav{
     .klik a {
         color: black;
         font-size: 1rem;
+    }
+}*/
+
+@media only screen and (min-width: 700px) {
+    .navigatie {
+        padding: 40px 20px;
     }
 }

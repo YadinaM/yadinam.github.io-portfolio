@@ -110,7 +110,6 @@ html {
 .content__image{
     background-image: url(../images/header-img.png);
     margin: 0;
-    width: 100vw; 
     height: 100vh; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -264,6 +263,7 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 500px;
+    gap: 20px;
 }
 
 .content__werk__details img{
@@ -328,14 +328,39 @@ footer{
 }
 
 @media only screen and (min-width: 700px) {
-    .me{
-        width: 500px;
-        height: auto;
-        max-width: 100%;
-        display: block;
-        margin: -10 auto;
+    p, li{
+        font-size: 14pt;
     }
-    
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 2000px;
+    }
+
+    /*header*/
+    .content__image h1 {
+        font-size: 14vw;  
+    }
+
+    /*specialisaties*/
+
+    .content__specials__wrap{
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .content__specials__wrap div{
+        height: 50%;
+    }
+
+    /*about me*/
+
     .me__mobile{
         display: none;
     }
@@ -343,25 +368,87 @@ footer{
     .content__about .me{
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
         margin-bottom: 60px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
     }
 
-}
-
-@media (min-width: 1000px) {
-
-    body{
-        background-color: green;
+    .content__about{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1600px;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    .content {
-        width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
+    .content__about__texts {
+        flex: 1; 
+        max-width: 800px;
     }
 
+    .content__about__Image {
+        flex: 1;
+        max-width: 50%;
+        min-width: 300px;
+    }
+
+    /*werk*/
+
+    .content__werk {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content__werk__works {
+        display: flex;
+        flex-wrap: wrap; 
+        max-width: 2000px; 
+        gap: 40px; 
+        justify-content: center;
+    }
+    
+    .content__werk__details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 calc(33.333% - 10px); 
+        max-width: 500px; 
+        min-width: 500px; 
+    }
+    
+    .content__werk__details a {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content__werk__details img {
+        max-width: 500px;
+        height: auto;
+        filter: grayscale(100%); 
+        transition: filter 0.3s ease;
+        border-radius: 8px;
+    }
+    
+    .content__werk__details img:hover {
+        filter: grayscale(0%); 
+    }
+
+    /*contact*/
+
+    .content__contact a {
+        font-size: 5vw;
+    }
+
+    /*footer*/
+    .footer__content{
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
 }
