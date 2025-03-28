@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'Apostrophic';
+    src: url('../fonts/apostrophic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay';
+    src: url('../fonts/sf-ui-display-bold-58646a511e3d9.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay';
+    src: url('../fonts/sf-ui-display-light-58646b33e0551.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay';
+    src: url('../fonts/sf-ui-display-medium-58646be638f96.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body{
+    background-color: #D9D4CA;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;   
+}
+
+.content__heading__image img {
+    display: none;
+}
+
+h1{
+    font-family: 'Apostrophic';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.5em;
+    color: #231C13;
+}
+
+h2{
+    font-family: 'Apostrophic';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    color: #231C13;
+}
+
+h3{
+    font-family: 'Apostrophic';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.8em;
+    color: #231C13;
+}
+
+h4{
+    font-family: 'SFUIDisplay';
+    font-weight: bold;
+    font-style: normal;
+    color: #231C13;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    font-size: 1.4em;
+}
+
+p, li{
+    font-family: 'SFUIDisplay';
+    font-weight: 300;
+    font-style: light;
+    color: #231C13;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    font-size: 12pt;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'SFUIDisplay';
+    font-weight: 300;
+    font-style: light;
+    color: #F7F7F5;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    font-size: 14pt;
+}
+
+.content{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+}
+
+.content__heading__text__buttons {
+    display: flex;
+}
+
+.text__button__web a{
+    color: #F7F7F5;
+    background-color: #6D301F;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'SFUIDisplay';
+    font-weight: 300;
+}
+
+.content__heading__text__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text__button__colab a {
+    color: #6D301F;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'SFUIDisplay';
+    font-weight: 300;  
+    border: 1px solid #6D301F;
+    margin-right: 12px;
+}
+
+.ontwerp {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.c1, .c2, .c3, .c4, .c5, .c6 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    margin: 10px;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.twist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.c1{
+    background-color: #5553CC;
+}
+
+.c2{
+    background-color: #55C9BE;
+}
+
+.c3{
+    background-color: #F47621;
+}
+
+.c4{
+    background-color: #F8F7F3;
+}
+
+.c5{
+    background-color: #02030E;
+}
+
+.content__images {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; 
+    padding: 0 10px; 
+}
+
+.content__images img {
+    flex: auto; 
+    max-width: 100%; 
+    margin-bottom: 10px; 
+    margin-top: 1em;
+}
+
+#img {
+    height: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+    .content__images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 10px; 
+    }
+
+    .ontwerp {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .colors {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Distribute circles with space between them */
+        margin-bottom: 2em;
+        margin-top: 2em;
+        width: 100%; /* Ensure the container takes full width */
+    }
+
+    .content__images img {
+        flex: auto; 
+        max-width: 200px; 
+        margin-bottom: 10px; 
+        margin-top: 1em;
+        gap: 12px;    
+    }
+
+    .c1, .c2, .c3, .c4, .c5, .c6 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%; 
+        margin: 10px;
+    }
+
+    .colors .twist {
+        display: flex;
+        justify-content: space-between; /* Ensure space between circles within twist */
+        width: 100%; /* Ensure the twist container takes full width */
+    }
+}
+
+@media (min-width: 800px) {
+    .content {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content__heading__image img {
+        display: flex;
+        width: 340px;
+        margin-right: 24px;
+    }
+
+    .content__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content__heading__text {
+        padding-bottom: 20px;
+    }
+
+    .content__images img {
+        flex: auto; 
+        max-width: 400px; 
+        margin-bottom: 10px; 
+        margin-top: 1em;
+        gap: 24px;
+    }
+
+    .content__images {
+        gap: 12px;  
+    }
+
+    .c1, .c2, .c3, .c4, .c5, .c6 {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%; 
+        margin: 10px;
+    }
+}
