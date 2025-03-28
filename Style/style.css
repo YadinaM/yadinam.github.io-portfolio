@@ -66,7 +66,7 @@ h4{
     color: #D9D4CA;
     letter-spacing: 3px;
     line-height: 1.5em;
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
 p, li{
@@ -76,7 +76,7 @@ p, li{
     color: #F7F7F5;
     letter-spacing: 3px;
     line-height: 1.5em;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 ul{
@@ -110,16 +110,14 @@ html {
 .content__image{
     background-image: url(../images/header-img.png);
     margin: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: -20%;
-    margin-right: -20%; 
-    display: flex;
     align-items: center;
     text-align: center; 
 }
@@ -246,19 +244,26 @@ html {
     margin-bottom: -30px;
 }
 
+.studies__content li{
+    margin-bottom: 20px;
+}
+
 /*section work*/
 
 .content__werk{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     align-self: center;
+    align-content: center;
 }
 
 .content__werk__works{
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
 }
 
 .content__werk__details img{
@@ -320,4 +325,20 @@ footer{
 .footer__socials a{
     color: #D9D4CA;
     margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+
+body{
+    background-color: red;
+}
+
+}
+
+@media (min-width: 800px) {
+
+    body{
+        background-color: green;
+    }
+
 }
