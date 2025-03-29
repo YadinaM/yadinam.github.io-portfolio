@@ -279,21 +279,6 @@ html {
     margin-bottom: 80px;
 }
 
-/*section contact*/
-
-.content__contact a {
-    font-family: 'Apostrophic';
-    font-size: 8vw;  
-    color: #F7F7F5;
-}
-
-.content__contact{
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /*footer*/
 
 footer{
@@ -329,7 +314,11 @@ footer{
 
 @media only screen and (min-width: 700px) {
     p, li{
-        font-size: 12pt;
+        font-size: 10pt;
+    }
+
+    .content__about__dropdown h3{
+        font-size: 14pt;
     }
 
     .content{
@@ -341,7 +330,12 @@ footer{
 
     /*header*/
     .content__image h1 {
-        font-size: 14vw;  
+        font-size: 6vw;  
+        width: 1000px;  
+    }
+
+    .content__image{
+        background-position: bottom;
     }
 
     /*specialisaties*/
@@ -371,7 +365,7 @@ footer{
         align-items: center;
         margin-bottom: 60px;
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
         height: auto;
     }
 
@@ -388,12 +382,12 @@ footer{
 
     .content__about__texts {
         flex: 1; 
-        max-width: 800px;
+        max-width: 600px;
     }
 
     .content__about__Image {
         flex: 1;
-        max-width: 50%;
+        max-width: 40%;
         min-width: 300px;
     }
 
@@ -440,16 +434,19 @@ footer{
         filter: grayscale(0%); 
     }
 
-    /*contact*/
-
-    .content__contact a {
-        font-size: 5vw;
-    }
-
     /*footer*/
     .footer__content{
         display: flex;
         flex-direction: row;
         gap: 100px;
+    }
+
+    .footer__content a{
+        font-size: 10pt;
+    }
+
+    
+    .footer__content H3{
+        font-size: 14pt;
     }
 }
